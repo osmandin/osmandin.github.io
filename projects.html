@@ -30,7 +30,7 @@
           <span aria-hidden="true" class="octicon octicon-link"></span></a>Software Contribution Analysis Tool
         </h3>
         <p>
-          Contribution analysis is concerned with objectively analyzing a student’s quantifiable contributions to team projects.
+          The project was concerned with objectively analyzing a student’s quantifiable contributions to team projects.
           The contention motivating the project was that accurately evaluating student contributions is an important pedagogical
           task that an instructor must not leave to guesswork.
 
@@ -41,12 +41,12 @@
 
         <p>
 
-          On an architectural level,
-          was implemented as a modular application, thereby making it possible to allow related contribution analysis plugins
+          On an architectural level, the applcication
+          was implemented as a modular application, thereby making it possible to allow relevant analysis plugins
           to be customized, added and removed. The program used Java and Jenkins to allow
           extensibility and probability. The program relies on open source libraries and software such as PrimeFaces (JSF library), JSF (MVC), Apache Maven (Java build tool), Apache Tomcat (servlet container), Apache Derby (embedded relational database), JUnit (unit testing).
 
-          There are three important logical components: (a) Contribution analyzer; (b) Data source (e.g., a source code repository) integration component; (c) Connectors (e.g., a PMD static analysis plugin that analyzes data from a repository). The tool does not download and run Git builds itself, but relays this
+          There are three important logical components: (a) a contributions analyzer; (b) a source code repository integration component; (c) connectors (e.g., a PMD static analysis plugin that analyzes data from a repository). The tool does not download and run Git builds itself, but relays this
           task to Jenkins, a popular open-source continuous-integration (CI) server. Jenkins runs various plugins as part of the build process and provides relevant statistics via a RESTful API.
 
           Jenkins also allows various build and code analysis plugins to be customized, added, and removed, thus making it making it possible for the tool to be extended. As long as a connector is available or can be written for Jenkins, the input source can be made available as part of the tool.
@@ -68,8 +68,8 @@
              <li> Consistent grading: Random or casual grading can be detrimental to student (and team) morale, after all.
              <li> Insight into TA behavior, by examining what class graders value, for example.
              <li> Identifying ``troubled"  relationships by getting alerts for teams that exhibit an imbalance in their participation score.
-                    <li> Transparency: All teams can be graded uniformly, and the effective participation criteria can be made clear easily.
-                      <li> Student peace of mind: A student can more easily report any ``free-riders" in a project.
+                    <li> All teams can be graded uniformly, and the effective participation criteria can be made clear easily.
+                      <li> A student can more easily report any ``free-riders" in a project.
                       </ul>
                     </p>
 
@@ -79,7 +79,8 @@
                       <a id="project2" class="anchor" href="#project2" aria-hidden="true">
                         <span aria-hidden="true" class="octicon octicon-link"></span></a>Visual Bag of Words Application
                       </h3>
-                      <p>The project’s goal was to build an object classification system by utilizing SIFT. The work combines computational photography (specifically, feature detection) with machine learning (classification and clustering).
+                      <p>The project’s goal was to build an object classification system by utilizing <a href="https://en.wikipedia.org/wiki/Scale-invariant_feature_transform">SIFT</a>.
+                        The work combined computational photography (specifically, feature detection) with machine learning (classification and clustering).
 
 
                         A real life use case is an application which detects unwanted or dangerous objects, such as liquid containers on shelves, in images captured by a robot. A robot would capture photos of each shelf in a facility and then periodically compare the images to the original (or recent) images. The robot might even be a small drone (ideally with autonomous flying capability) or a rover with navigation capabilities.
@@ -90,13 +91,13 @@
 
                         The business benefit is it can save the cost of hiring and managing human workers to do manual shelf scanning in a large library or warehouse.
 
-                        A BoW model represents an object (e.g., image of a human face) as a histogram over its regions or features (e.g., eyes, nose, ears, etc). Csurka et al. (2004) demonstrated a BoW model to distinguish between examples of photos of books, cars, trees people, etc., for example.
+                        A BoW model represents an object (e.g., image of a human face) as a histogram over its regions or features (e.g., eyes, nose, ears, etc). Csurka et al. (in their 2004 paper) demonstrated a BoW model to distinguish between examples of photos of books, cars, trees people, etc., for example.
 
                         <img src="bag_of_words_books.png" alt="books" width="600"/>
 
                       </p>
 
-                      The results are here:
+                      The tool detects suspicious items such as shown below. Note that there are around 20% false positivies (which really is the state of the art using simple ML approaches).
 
                       <p>
 
@@ -115,8 +116,8 @@
                           <span aria-hidden="true" class="octicon octicon-link"></span></a>Robot Localization using Particle and Kalman Filters
                         </h3>
                         <p>Kalman filters, EKF, k-Nearest Neighbors, Random Forests and particle filters:
-                          I helped implement several different algorithms and approaches for tackling the
-                          motion prediction problem of a micro robot. HEXBUG Nano is a micro-robot that propels forward and
+                          As part of a team, I helped implement several different algorithms and approaches for tackling the
+                          motion prediction problem of a micro robot. <a href="https://www.hexbug.com/nano">HEXBUG Nano</a> is a micro-robot that propels forward and
                           explores its environment by using the physics of its vibration. Different motion models were explored,
                           including linear, circular and Brownian motion. The best results were achieved
                           with particle filters and a simple motion model. Machine learning algorithms also produced competitive scores,
@@ -130,7 +131,8 @@
                               <span aria-hidden="true" class="octicon octicon-link"></span></a>Optimal Course Scheduler
                             </h3>
                             <p>Created a Java based course scheduler system using integer programming with the <a href="http://www.gurobi.com/">Gurobi</a>
-                              optimization library.</p>
+                              optimization library. The program uses different criteria (number of students, available instructors, etc.) to
+                            try to come up with an optimal solution.</p>
 
                               <p>
                                 The application was implemented as a 3-tier web application. Functionality was separated into different modules to avoid creating a monolithic application. Like most academic IT applications written in Java (e.g., Sakai),
@@ -140,7 +142,10 @@
 
                               <p>
 
-                                Choosing a 3-tier architecture and a Java EE based stack proved to be a good choice. A 3-tier architecture allows vertical and horizontal scaling. For example, more processing power can be added to the database, and a database can be clustered. In addition, Java EE allows in-memory transactions using a JPA 2nd level cache, instead of having to write to disk continuously. This allows using a JVM cluster or a data grid cluster (e.g., Infinispan) as an in-memory cache.
+                                Choosing a 3-tier architecture and a Java EE based stack proved to be a "good enough" choice (sufficient for an A and an offer of TAship for the course). The architecture allows vertical and horizontal scaling.
+                                In addition, Java EE allows in-memory transactions using a JPA 2nd level cache, instead of having to write to disk continuously. This allows the use of a JVM cluster or a data grid cluster (e.g., Infinispan) as an in-memory cache.
+                                For large optimization problems, a distributed component architecture would have been a better choice.
+                                This possibilit was not explored due to time constraints, but I hope to create a different implementation in future (using Scala perhaps).
 
                               </p>
 
@@ -157,11 +162,12 @@
                                 <a id="project5" class="anchor" href="#project5" aria-hidden="true">
                                   <span aria-hidden="true" class="octicon octicon-link"></span></a>Userspace Threading Library
                                 </h3>
-                                <p>Created a userspace thread and mutex library in C.
-                                  The preemptive round robin scheduler has a queue of threads to be scheduled.
+                                <p>As part of a systems course, I created a userspace thread and mutex library in C (as an alternative to NPTL).
+                                  The preemptive round robin scheduler has a queue of threads to be scheduled. Needless to say,
+                                  this was a challenging but rewarding project.
                                 </p>
                                 <p>
-                                  The API looks like the following:
+                                  The thread and mutex API looks like the following:
                                   <pre>
 void thread_init(long period);
 int  thread_create(thread_t *thread;
@@ -183,7 +189,7 @@ int  thread_mutex_unlock(thread_mutex_t *mutex);
                             <!-- FOOTER  -->
                             <div id="footer_wrap" class="outer">
                               <footer class="inner">
-                                <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+                                <p>This site was published with <a href="https://pages.github.com">GitHub Pages</a>. It's a work in progress.</p>
                               </footer>
                             </div>
 
