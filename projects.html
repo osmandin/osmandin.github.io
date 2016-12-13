@@ -53,50 +53,35 @@
             On an architectural level, the application
             was implemented as a modular application, thereby making it possible to allow relevant
             analysis plugins
-            to be customized, added and removed. The project used Jenkins to allow
-            extensibility and probability. The project also relied on open source libraries and software
+            to be customized, added and removed. The project also relied on open source libraries and software
             such as PrimeFaces (JSF library), JSF (MVC), Apache Maven (Java build tool), Apache
             Tomcat (servlet container), Apache Derby (embedded relational database), JUnit (unit
-            testing).
+            testing), and Jenkins.
         </p>
 
         <p>
-            Design wise, there are three important logical components: (a) a contributions analyzer; (b) a source
-            code repository integration component; (c) connectors (e.g., a PMD static analysis
-            plugin that analyzes data from a repository). The tool does not download and run Git
+            The tool does not download and run the
             builds itself, but relays this
-            task to Jenkins, a popular open-source continuous-integration (CI) server. Jenkins runs
+            task to Jenkins, a popular open-source continuous-integration (CI) server.
+            As a student makes commits to a project, Jenkins runs
             various plugins as part of the build process and provides relevant statistics via a
-            RESTful API.
+            RESTful API. The web application leverages these APIs to analyze and summarize
+            student activity.
         </p>
 
         <p>
             Jenkins also allows various build and code analysis plugins to be customized, added, and
-            removed, thus making it making it possible for the tool to be extended. As long as a
-            connector is available or can be written for Jenkins, the input source can be made
-            available as part of the tool.
-        </p>
-
-        <p>
-            To use the tool, an instructor would create (perhaps programmatically) GitHub
-            repositories for the teams, assign students to teams, provide students access to their
-            team repositories, and list all team repositories in a CSV file.
-        </p>
-
-        <p>
-            The tool then imports all necessary CSV files and updates the user interface with the
-            new data. The instructor can then run the analysis on the provided data.
+            removed, thus making it making it possible for the tool to be extended.
         </p>
 
         <p>
             Some of the pertinent features of the application are: (a) integration with external
             build systems; (b) authentication and authorization; (c) visual comparison of student
-            performances; (d) bulk data import; and (e) data export for external analysis.
+            performances; (d) bulk data import; and (e) data export.
         </p>
 
         <p>
-            Automating contribution analysis has several benefits:  </p>
-
+            As the report suggests, automating contribution analysis has several benefits:</p>
         <ul>
             <li>Gathering insight into student behavior by looking at how acting as an effective
                 participant relates to the final student grade.
