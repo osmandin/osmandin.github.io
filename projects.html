@@ -181,8 +181,8 @@
             <a id="project5" class="anchor" href="#project5" aria-hidden="true">
                 <span aria-hidden="true" class="octicon octicon-link"></span></a>Userspace Threading Library
         </h3>
-        <p>As part of a systems course, I created a userspace thread and mutex library in C (as an alternative to NPTL).
-            The preemptive round robin scheduler has a queue of threads to be scheduled. Needless to say,
+        <p>As part of a systems course, I created a C-based userspace thread and mutex library (as an alternative to NPTL).
+            The preemptive round robin scheduler works on a queue of threads to be scheduled. Needless to say,
             this was a challenging and rewarding project.
         </p>
         <p>
@@ -213,7 +213,8 @@ int  thread_mutex_unlock(thread_mutex_t *mutex);
                   </h3>
 
                   <p>The project’s goal was to build an object classification system by utilizing <a
-                          href="https://en.wikipedia.org/wiki/Scale-invariant_feature_transform">SIFT</a> for feature detection.
+                          href="https://en.wikipedia.org/wiki/Scale-invariant_feature_transform">SIFT</a> for feature detection
+                          and a <a href="https://en.wikipedia.org/wiki/Bag-of-words_model_in_computer_vision">Visual Bag of Words</a> model.
                       The work combined computational photography (specifically, feature detection) with
                       machine learning (classification and clustering). </p>
 
@@ -223,8 +224,8 @@ int  thread_mutex_unlock(thread_mutex_t *mutex);
                       original (or recent) images. The robot might even be a small drone (ideally with
                       autonomous flying capability) or a rover with navigation capabilities. </p>
 
-                  <p>There can different type of unwanted objects and shelving errors, so it is desirable to
-                      not “hardcode” which objects are deemed "dangerous."" Hence, machine learning. </p>
+                  <p>There can different types of unwanted objects and shelving errors, so it is desirable to
+                      not "hardcode" which objects are deemed "dangerous." Hence, machine learning. </p>
 
                   <p>A BoW model represents an object (e.g., image of a human face) as a histogram over its
                       regions or features (e.g., eyes, nose, ears, etc). Csurka et al. (in their 2004 paper)
