@@ -7,10 +7,6 @@
     <meta name="description" content="osmandin.GitHub.io : ">
     <link rel="stylesheet" type="text/css" media="screen"
           href="stylesheets/stylesheet.css">
-    <!--
-    <link rel="stylesheet" type="text/css" href="stylesheets/slick.css"/>
-   <link rel="stylesheet" type="text/css" href="stylesheets/slick-theme.css"/>
-   -->
     <title>Yale Projects</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -21,11 +17,9 @@
 <!-- HEADER -->
 <div id="header_wrap" class="outer">
     <header class="inner">
-        <a id="forkme_banner" href="https://github.com/osmandin">View on
-            GitHub</a>
-
+        <!-- <a id="forkme_banner" href="https://github.com/osmandin">View on
+            GitHub</a> -->
         <h1 id="project_title">Technical Projects</h1>
-
         <h2 id="project_tagline"></h2>
     </header>
 </div>
@@ -35,20 +29,7 @@
 <div id="main_content_wrap" class="outer">
     <section id="main_content" class="inner">
 
-        <!--
-
-        <div class="slick-track" role="listbox" style="opacity: 1; width: 1536px; transform: translate3d(-384px, 0px, 0px);">
-          <div class="slick-slide slick-cloned" data-slick-index="-3" aria-hidden="true" tabindex="-1" style="width: 88px;">
-            <img id="shelfscan" src="shelfscan3.png" alt="shelfscan" width="300"/>
-          </div>
-          <div class="slick-slide slick-cloned" data-slick-index="-2" aria-hidden="true" tabindex="-1" style="width: 88px;">
-          <img id="tifffinder" src="brbl-bulktransfer.png" alt="Tiff Finder" width="300" height="200"/>
-          </div>
-        </div>
-      -->
-
-
-        <!-- Project 1 -->
+       <!-- Project 1 -->
         <h3>
             <a id="welcome-to-github-pages" class="anchor" href="#project1"
                aria-hidden="true">
@@ -61,14 +42,14 @@
         <ul>
             <li>Contributed to <a href="http://fedorarepository.org/">Fedora 4</a>
                 features (such as policy driven storage), participated in Scrum
-                sprints, and fixed bugs. An export of some JIRA tickets is available
+                sprints, improved code coverage, and fixed bugs. An export of some JIRA tickets is available
                 <a href="https://github.com/osmandin/osmandin.github.io/blob/master/fedora.md#jira">here</a>,
                 and so is an export of Pivotal Tracker <a
                         href="https://github.com/osmandin/osmandin.github.io/blob/master/fedora.md#pivotal">tickets</a>.
-                More details can be found in <a
+                (More details can be found in <a
                         href="https://www.pivotaltracker.com/n/projects/684825/search?q=Osman%20Din%20includedone%3Atrue">Pivotal</a>
                 and
-                <a href="https://jira.duraspace.org/projects/FCREPO">JIRA</a>.
+                <a href="https://jira.duraspace.org/projects/FCREPO">JIRA</a>).
             </li>
             <li>Performed system testing using different tools (VisualVM, The
                 Grinder, etc.). Analyzed ModeShape
@@ -94,28 +75,31 @@
         <ul>
             <li>Created several JAX-RS based services such as an archival
                 content export service (for ArchivesSpace). The export service
-                conducts change analysis to determine if the relevant
-                metadata has changed
-                since the last export.
-                The service also applies several stylesheets to validate
-                and generate MODS.
+                conducts content change analysis to determine which metadata files
+                have changed since the last export.
+                The program also applies several stylesheets to validate
+                and transform MODS files. This service prevented the need to update
+                the full multi-million object collection (instead of just a few objects).
+                It's been designed as a part of a larger effort to automate
+                metadata publishing.
               </li>
               <li>Created a SOAP-based persistent identifier management service
-                that was used by many departments. The service
+                that was used by many departments. It was written using
+                Apache Axis. The service
                 allowed machine-to-machine bulk
                 <a href="https://www.handle.net/">handle</a> creation, and a
                 JSP/Servlets-based GUI was also created to facilitate
                 testing and spreadsheet export. This service was one of the very
-                first projects launched by the Office of Digital Assets and Images,
+                first projects launched by the Office of Digital Assets and Infrastructure,
                 and it was critical for this project to succeed. Millions of
-                handles were created by his service (e.g., by YUL). A
-                a newer improved version of this service exists (created by
-                aother team).
+                handles were created by his service. (A
+                different version of this service exists now).
             </li>
             <li>
-                Created a central logging service to help build error visualizations
-                (for apps like Tableau). After experimenting with ELK, I introduced
-                Splunk as an alternative to this service.
+                Created a central logging service to help build error stats and
+                visualizations (for apps like Tableau). After experimenting with other solutions,
+                I introduced Splunk as an alternative to this service. I'm also
+                implementing message-oriented solutions (using JMS) to connect disparate systems.
             </li>
             <li>
                 Helped create an application for exporting the contents of a large
@@ -129,8 +113,6 @@
         </p>
 
 
-        <!-- Project 2 -->
-
         <h3>
             <a id="welcome-to-github-pages" class="anchor" href="#collections"
                aria-hidden="true">
@@ -140,31 +122,26 @@
 
         <p>
         <ul>
-            <li>Created <a
+            <li>Working with a UI/UX developer in my team, I'm helping create <a
                     href="http://palmquist.beinecke.library.yale.edu:9000/">Palmquist</a>
                 (developed w/ Spring
-                Boot/MVC/JPA),
-                launched <a href="http://raai.library.yale.edu">RAAI</a>,
-                and enabled audio streaming using QuickTime, RTSP and MacOS X Server for an
+                Boot/MVC/JPA) for the Beinecke library.</li>
+            <li>
+                A long time ago, I launched the Ross Archive of African Images
+                collection (developed by an external vendor), and enabled audio streaming
+                using QuickTime, RTSP and MacOS X Server for an
                 international collection (now offline).
             </li>
-            <li>Contributed performance improvements to prominent Hydra-based <a
-                    href="http://findit.library.yale.edu/">collections</a>.
-            </li>
-            <!-- <li>Analyzed and refactored IT tests</li> -->
-            <li>Analyzed Solr configuration (schema, core setup) and customized
-                it to improve search results for
-                non-Latin scripts. (This project is in progress.)
-            </li>
-            <li>Analyzed Solr configuration to identify potential performance
-                bottlenecks. I found out that we could not balance our Solr
-                ingest and query speeds well because of the particular gem versions/Solr
-                we were using.
-            </li>
-
+            <!--
+              <li>Analyzed Solr configuration (schema, core setup) and customized
+                  it to improve search results for
+                  non-Latin scripts. (This project is in progress.)
+              </li>
+            -->
         </ul>
 
-        <!-- Project 4 -->
+
+                <!-- Project 4 -->
 
         <h3>
             <a id="systems" class="anchor" href="#entperise" aria-hidden="true">
@@ -208,20 +185,19 @@
         <p>
 
         <ul>
-            <li>Created "bulk cataloging" application "<a
-                    href="https://github.com/yalelibrary/bulk-fcrepo-import">Ladybird
-                2</a>" with several features: import/export,
-                cron management, asynchronous processing, notifications,
-                versioning, etc. The Java-based project used
-                Quartz,
-                JAX-RS, JSF, and Hibernate. (The project is currently on hold.)
-            </li>
-            <li>Created a web application that helps staff manage inventory
-                (students scan and report books that are
-                shelved out of order, etc.).
+            <li>Created a JSF/Hibernate web application that helps staff manage inventory.
+                Students scan books, and the program generates a report
+                that shows books that are shelved out of order, etc.
+                The webapp allows a user to store reports and search them.
                 This application is used by many Yale libraries (and perhaps
                 even at UConn).
                 <!-- <img id="shelfscan" src="shelfscan3.png" alt="shelfscan" width="300"/></li> -->
+                <li>Created "bulk cataloging" application with several features: import/export,
+                    cron management, asynchronous processing, notifications,
+                    versioning, etc. The Java-based project used
+                    Quartz,
+                    JAX-RS, JSF, and Hibernate. (The project is currently on hold.)
+                </li>
             <li>Created a Swing bulk folder transfer application with
                 start/stop functionality and a backend indexing
                 service.
@@ -238,6 +214,52 @@
         </ul>
         </p>
 
+        <!-- Project 2 -->
+
+        <h3>
+            <a id="welcome-to-github-pages" class="anchor" href="#performance"
+               aria-hidden="true">
+                <span aria-hidden="true"
+                      class="octicon octicon-link"></span></a>Performance Analysis
+        </h3>
+
+        <p>
+        <ul>
+
+            <li>Contributed performance improvements to prominent Hydra-based <a
+                    href="http://findit.library.yale.edu/">collections</a> by
+                    identifying code-related bottlenecks. Specifically,
+                    looking at relevant log files (and with the help of New Relic),
+                    I found that Solr itself was returning results
+                    relatively fast (200-660ms for all documents, 1-2 msec for a particular object),
+                    but 90% of the time was getting spent in Blacklight-related logic
+                    (method “index” in a "CatalogController", e.g.), possibly
+                    due to complicated parent-child logic. If the initial Solr query to get the 10 search results
+                    was being made at t=0 seconds, the next one, to get the first object,
+                    was being made around t=1 seconds later. A loop with 10 objects, representing
+                    a page with 10 results, therefore, took almost 6-8 seconds.
+                    I also observed some other coding issues.
+                    For example, there were frequently called methods
+                    that loaded up configuration
+                    files every time
+                    they were invoked. I also found out the reason
+                    the landing page loaded in 60-90 seconds (after a user
+                    got redirected from the authentication layer):
+                    the code was making an unnecessary call to an unkempt
+                    user table with hundreds and thousands of rows.
+            </li>
+            <!-- <li>Analyzed and refactored IT tests</li> -->
+
+            <li>Analyzed Solr configuration to identify potential performance
+                bottlenecks. I found out that we could not balance our Solr
+                ingest and query speeds well because of some gem versions
+                we were using. Specifically, the gem "hydra-head-6.0.0"
+                (and thus ActiveFedora) was making hard commits, thereby creating
+                the observed conflict between ingest and user search (ActiveFedora
+                changed its hard committing behavior in later versions).
+            </li>
+
+        </ul>
         <p>
             Back to the <a href="index.html">home page</a>.
         </p>
@@ -255,18 +277,5 @@
     </footer>
 </div>
 
-<!--
-<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script type="text/javascript" src="javascripts/slick.min.js"></script>
-
-  <script type="text/javascript">
-    $(document).ready(function(){
-      $('.your-class').slick({
-        // setting-name: setting-value
-      });
-    });
-  </script>
--->
 </body>
 </html>

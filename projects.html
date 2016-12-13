@@ -2,172 +2,183 @@
 <html>
 
 <head>
-  <meta charset='utf-8'>
-  <meta http-equiv="X-UA-Compatible" content="chrome=1">
-  <meta name="description" content="osmandin.GitHub.io : ">
-  <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-  <title>Projects</title>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="osmandin.GitHub.io : ">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <title>Projects</title>
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <div id="header_wrap" class="outer">
+<!-- HEADER -->
+<div id="header_wrap" class="outer">
     <header class="inner">
-      <a id="forkme_banner" href="https://github.com/osmandin">View on GitHub</a>
-      <h1 id="project_title">Projects</h1>
-      <h2 id="project_tagline"></h2>
-    </header>
-  </div>
+        <!-- <a id="forkme_banner" href="https://github.com/osmandin">View on GitHub</a> -->
 
-  <!-- MAIN CONTENT -->
-  <div id="main_content_wrap" class="outer">
+        <h1 id="project_title">Course Projects</h1>
+
+        <h2 id="project_tagline"></h2>
+    </header>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="main_content_wrap" class="outer">
     <section id="main_content" class="inner">
 
-      <!-- Project 1 -->
-      <h3>
-        <a id="project1" class="anchor" href="#project1" aria-hidden="true">
-          <span aria-hidden="true" class="octicon octicon-link"></span></a>Software Contribution Analysis Tool
+        <!-- Project 1 -->
+        <h3>
+            <a id="project1" class="anchor" href="#project1" aria-hidden="true">
+                <span aria-hidden="true" class="octicon octicon-link"></span></a>Software
+            Contribution Analysis Tool
         </h3>
-        <p>
-          The project was concerned with objectively analyzing a student’s quantifiable contributions to team projects.
-          The contention motivating the project was that accurately evaluating student contributions is an important pedagogical
-          task that an instructor must not leave to guesswork.
 
-          <img src="cat-screenshot.png" alt="contrib analysis tool" width="600">
+        <p>
+            The project was concerned with objectively analyzing a student’s quantifiable
+            contributions to team projects.
+            The contention motivating the project was that accurately evaluating student
+            contributions is an important pedagogical
+            task that an instructor must not leave to guesswork. </p>
+
+            <img src="cat-screenshot.png" alt="contrib analysis tool" width="600">
+        <p>
+            On an architectural level, the application
+            was implemented as a modular application, thereby making it possible to allow relevant
+            analysis plugins
+            to be customized, added and removed. The project used Jenkins to allow
+            extensibility and probability. The project also relied on open source libraries and software
+            such as PrimeFaces (JSF library), JSF (MVC), Apache Maven (Java build tool), Apache
+            Tomcat (servlet container), Apache Derby (embedded relational database), JUnit (unit
+            testing).
+        </p>
+
+        <p>
+            Design wise, there are three important logical components: (a) a contributions analyzer; (b) a source
+            code repository integration component; (c) connectors (e.g., a PMD static analysis
+            plugin that analyzes data from a repository). The tool does not download and run Git
+            builds itself, but relays this
+            task to Jenkins, a popular open-source continuous-integration (CI) server. Jenkins runs
+            various plugins as part of the build process and provides relevant statistics via a
+            RESTful API.
+        </p>
+
+        <p>
+            Jenkins also allows various build and code analysis plugins to be customized, added, and
+            removed, thus making it making it possible for the tool to be extended. As long as a
+            connector is available or can be written for Jenkins, the input source can be made
+            available as part of the tool.
+        </p>
+
+        <p>
+            To use the tool, an instructor would create (perhaps programmatically) GitHub
+            repositories for the teams, assign students to teams, provide students access to their
+            team repositories, and list all team repositories in a CSV file.
+        </p>
+
+        <p>
+            The tool then imports all necessary CSV files and updates the user interface with the
+            new data. The instructor can then run the analysis on the provided data.
+        </p>
+
+        <p>
+            Some of the pertinent features of the application are: (a) integration with external
+            build systems; (b) authentication and authorization; (c) visual comparison of student
+            performances; (d) bulk data import; and (e) data export for external analysis.
+        </p>
+
+        <p>
+            Automating contribution analysis has several benefits:  </p>
+
+        <ul>
+            <li>Gathering insight into student behavior by looking at how acting as an effective
+                participant relates to the final student grade.
+            <li>Insight into TA behavior, by examining what class graders value, for example.
+            <li>Identifying "troubled" relationships by getting alerts for teams that exhibit an
+                imbalance in their participation score.
+            <li>All teams can be graded uniformly, and the effective participation criteria can be
+                made clear easily.
+            <li>A student can more easily report any ``free-riders" in a project.
+        </ul>
+
+        <!-- Project 3 -->
+
+        <h3>
+            <a id="project3" class="anchor" href="#project3" aria-hidden="true">
+                <span aria-hidden="true" class="octicon octicon-link"></span></a>Robot Localization
+            using Particle and Kalman Filters
+        </h3>
+
+        <p>Kalman filters, EKF, k-Nearest Neighbors, Random Forests and
+            <a href="https://en.wikipedia.org/wiki/Monte_Carlo_localization">particle filters</a>:
+            I helped implement several different algorithms and approaches for
+            tackling the
+            motion prediction problem of a micro robot. <a href="https://www.hexbug.com/nano">HEXBUG
+                Nano</a> is a micro-robot that propels forward and
+            explores its environment by using the physics of its vibration. Different motion models
+            were explored,
+            including linear, circular and Brownian motion. The best results were achieved
+            with particle filters and a simple motion model. Machine learning algorithms also
+            proved competitive,
+            but particle filters gave more consistent results, ran more efficiently, and did not
+            overfit and require much training data.</p>
+
+
+        <!-- Project 4 -->
+
+        <h3>
+            <a id="project4" class="anchor" href="#project4" aria-hidden="true">
+                <span aria-hidden="true" class="octicon octicon-link"></span></a>Optimal Course
+            Scheduler
+        </h3>
+
+        <p>Created a Java based course scheduler system using integer programming with the <a
+                href="http://www.gurobi.com/">Gurobi</a>
+            optimization library. The program uses different criteria (number of students, available
+            instructors, etc.) to
+            try to come up with an optimal scheduling solution.</p>
+
+        <p>
+            The application was implemented as a 3-tier web application. The functionality was separated
+            into different modules to avoid a monolithic application. Like some academic IT
+            applications written in Java (e.g., Sakai),
+            the architecture/design was loosely based on Java EE. JavaServer Faces (JSF) framework
+            was used to realize the MVC front-end layer. Hibernate, as a Java Persistence API (JPA)
+            implementation, was chosen as the ORM framework.
+        </p>
+
+        <p>
+
+            Choosing a 3-tier architecture and a Java EE based stack proved to be a "good enough"
+            choice (sufficient for an A and an offer of TAship for the course). The architecture
+            does indirectly allow vertical and horizontal scaling.
+            In addition, Java EE allows in-memory transactions using a JPA 2nd level cache.
+            This allows the use of a JVM cluster or a data
+            grid cluster (e.g., Infinispan) as an in-memory cache.
+            For large-scale optimization problems, a truly distributed component architecture would have been a
+            better choice.
+            This possibility was not explored due to time constraints, but I hope to create a
+            different implementation in future (using Scala and Akka perhaps).
+
+        </p>
+
+        <p>
+            <img src="recommender-app.png" alt="recommender app" width="600"/>
 
         </p>
 
 
-        <p>
+        <!-- Project 5 -->
 
-          On an architectural level, the applcication
-          was implemented as a modular application, thereby making it possible to allow relevant analysis plugins
-          to be customized, added and removed. The program used Java and Jenkins to allow
-          extensibility and probability. The program relies on open source libraries and software such as PrimeFaces (JSF library), JSF (MVC), Apache Maven (Java build tool), Apache Tomcat (servlet container), Apache Derby (embedded relational database), JUnit (unit testing).
-
-          There are three important logical components: (a) a contributions analyzer; (b) a source code repository integration component; (c) connectors (e.g., a PMD static analysis plugin that analyzes data from a repository). The tool does not download and run Git builds itself, but relays this
-          task to Jenkins, a popular open-source continuous-integration (CI) server. Jenkins runs various plugins as part of the build process and provides relevant statistics via a RESTful API.
-
-          Jenkins also allows various build and code analysis plugins to be customized, added, and removed, thus making it making it possible for the tool to be extended. As long as a connector is available or can be written for Jenkins, the input source can be made available as part of the tool.
-          <!-- Table \ref{table:plugins} highlights some of these inputs and the weights an instructor might attach to them. -->
-
-          To use the tool, an instructor would create (perhaps programmatically) GitHub repositories for the teams, assign students to teams, provide students access to their team repositories, and list all team repositories in a CSV file.
-
-          The tool then imports all necessary CSV files and updates the user interface with the new data. The instructor can then run the analysis on the provided data.
-
-          Some of the pertinent features of the application are: (a) integration with external build systems; (b) authentication and authorization; (c) visual comparison of student performances; (d) bulk data import; and (e) data export for external analysis.
-
+        <h3>
+            <a id="project5" class="anchor" href="#project5" aria-hidden="true">
+                <span aria-hidden="true" class="octicon octicon-link"></span></a>Userspace Threading Library
+        </h3>
+        <p>As part of a systems course, I created a userspace thread and mutex library in C (as an alternative to NPTL).
+            The preemptive round robin scheduler has a queue of threads to be scheduled. Needless to say,
+            this was a challenging and rewarding project.
         </p>
-
         <p>
-          Automating contribution analysis can reap several benefits:
-
-          <ul>
-            <li> Gathering insight into student behavior by looking at how acting as an effective participant relates to the final student grade.
-             <li> Consistent grading: Random or casual grading can be detrimental to student (and team) morale, after all.
-             <li> Insight into TA behavior, by examining what class graders value, for example.
-             <li> Identifying ``troubled"  relationships by getting alerts for teams that exhibit an imbalance in their participation score.
-                    <li> All teams can be graded uniformly, and the effective participation criteria can be made clear easily.
-                      <li> A student can more easily report any ``free-riders" in a project.
-                      </ul>
-                    </p>
-
-                    <!-- Project 2 -->
-
-                    <h3>
-                      <a id="project2" class="anchor" href="#project2" aria-hidden="true">
-                        <span aria-hidden="true" class="octicon octicon-link"></span></a>Visual Bag of Words Application
-                      </h3>
-                      <p>The project’s goal was to build an object classification system by utilizing <a href="https://en.wikipedia.org/wiki/Scale-invariant_feature_transform">SIFT</a>.
-                        The work combined computational photography (specifically, feature detection) with machine learning (classification and clustering).
-
-
-                        A real life use case is an application which detects unwanted or dangerous objects, such as liquid containers on shelves, in images captured by a robot. A robot would capture photos of each shelf in a facility and then periodically compare the images to the original (or recent) images. The robot might even be a small drone (ideally with autonomous flying capability) or a rover with navigation capabilities.
-
-
-                        There can different type of unwanted objects and shelving errors, so it is desirable to not “hardcode” what objects are deemed “dangerous.” Hence, machine learning is beneficial.
-
-
-                        The business benefit is it can save the cost of hiring and managing human workers to do manual shelf scanning in a large library or warehouse.
-
-                        A BoW model represents an object (e.g., image of a human face) as a histogram over its regions or features (e.g., eyes, nose, ears, etc). Csurka et al. (in their 2004 paper) demonstrated a BoW model to distinguish between examples of photos of books, cars, trees people, etc., for example.
-
-                        <img src="bag_of_words_books.png" alt="books" width="600"/>
-
-                      </p>
-
-                      The tool detects suspicious items such as shown below. Note that there are around 20% false positives (which really is the state of the art using simple ML approaches).
-
-                      <p>
-
-                        <img src="bagofwords_challenges.png" alt="books challenges" width="600"/>
-
-
-                      </p>
-
-
-
-
-                      <!-- Project 3 -->
-
-                      <h3>
-                        <a id="project3" class="anchor" href="#project3" aria-hidden="true">
-                          <span aria-hidden="true" class="octicon octicon-link"></span></a>Robot Localization using Particle and Kalman Filters
-                        </h3>
-                        <p>Kalman filters, EKF, k-Nearest Neighbors, Random Forests and particle filters:
-                          As part of a team, I helped implement several different algorithms and approaches for tackling the
-                          motion prediction problem of a micro robot. <a href="https://www.hexbug.com/nano">HEXBUG Nano</a> is a micro-robot that propels forward and
-                          explores its environment by using the physics of its vibration. Different motion models were explored,
-                          including linear, circular and Brownian motion. The best results were achieved
-                          with particle filters and a simple motion model. Machine learning algorithms also produced competitive scores,
-                          but particle filters gave more consistent results, ran more efficiently, and did not require much training data.</p>
-
-
-                          <!-- Project 4 -->
-
-                          <h3>
-                            <a id="project4" class="anchor" href="#project4" aria-hidden="true">
-                              <span aria-hidden="true" class="octicon octicon-link"></span></a>Optimal Course Scheduler
-                            </h3>
-                            <p>Created a Java based course scheduler system using integer programming with the <a href="http://www.gurobi.com/">Gurobi</a>
-                              optimization library. The program uses different criteria (number of students, available instructors, etc.) to
-                            try to come up with an optimal solution.</p>
-
-                              <p>
-                                The application was implemented as a 3-tier web application. Functionality was separated into different modules to avoid creating a monolithic application. Like most academic IT applications written in Java (e.g., Sakai),
-                                the architecture design was loosely based on Java EE. JavaServer Faces (JSF) framework was used to realize the MVC front-end layer. Hibernate, as a Java Persistence API (JPA) implementation, was chosen as the ORM framework. The scheduler was implemented with Gurobi Optimizer.
-
-                              </p>
-
-                              <p>
-
-                                Choosing a 3-tier architecture and a Java EE based stack proved to be a "good enough" choice (sufficient for an A and an offer of TAship for the course). The architecture allows vertical and horizontal scaling.
-                                In addition, Java EE allows in-memory transactions using a JPA 2nd level cache, instead of having to write to disk continuously. This allows the use of a JVM cluster or a data grid cluster (e.g., Infinispan) as an in-memory cache.
-                                For large optimization problems, a distributed component architecture would have been a better choice.
-                                This possibility was not explored due to time constraints, but I hope to create a different implementation in future (using Scala perhaps).
-
-                              </p>
-
-                              <p>
-                                <img src="recommender-app.png" alt="recommender app" width="600"/>
-
-                              </p>
-
-
-
-                              <!-- Project 5 -->
-
-                              <h3>
-                                <a id="project5" class="anchor" href="#project5" aria-hidden="true">
-                                  <span aria-hidden="true" class="octicon octicon-link"></span></a>Userspace Threading Library
-                                </h3>
-                                <p>As part of a systems course, I created a userspace thread and mutex library in C (as an alternative to NPTL).
-                                  The preemptive round robin scheduler has a queue of threads to be scheduled. Needless to say,
-                                  this was a challenging but rewarding project.
-                                </p>
-                                <p>
-                                  The thread and mutex API looks like the following:
+            The thread and mutex API looks like the following: </p>
                                   <pre>
 void thread_init(long period);
 int  thread_create(thread_t *thread;
@@ -182,16 +193,56 @@ thread_mutex_init(thread_mutex_t *mutex);
 int  thread_mutex_lock(thread_mutex_t *mutex);
 int  thread_mutex_unlock(thread_mutex_t *mutex);
           </pre>
-                                </p>
-                              </section>
-                            </div>
 
-                            <!-- FOOTER  -->
-                            <div id="footer_wrap" class="outer">
-                              <footer class="inner">
-                                <p>This site was published with <a href="https://pages.github.com">GitHub Pages</a>. It's a work in progress.</p>
-                              </footer>
-                            </div>
 
-                          </body>
-                          </html>
+
+                  <!-- Project  -->
+
+                  <h3>
+                      <a id="project2" class="anchor" href="#project2" aria-hidden="true">
+                          <span aria-hidden="true" class="octicon octicon-link"></span></a>Visual Bag of Words
+                      Application
+                  </h3>
+
+                  <p>The project’s goal was to build an object classification system by utilizing <a
+                          href="https://en.wikipedia.org/wiki/Scale-invariant_feature_transform">SIFT</a>.
+                      The work combined computational photography (specifically, feature detection) with
+                      machine learning (classification and clustering). </p>
+
+                  <p>A use case is an application which detects unwanted or dangerous objects, such
+                      as liquid containers on shelves, in images captured by a robot. A robot could capture
+                      photos of each shelf in a facility and then periodically compare the images to the
+                      original (or recent) images. The robot might even be a small drone (ideally with
+                      autonomous flying capability) or a rover with navigation capabilities. </p>
+
+                  <p>There can different type of unwanted objects and shelving errors, so it is desirable to
+                      not “hardcode” which objects are deemed "dangerous."" Hence, machine learning. </p>
+
+                  <p>A BoW model represents an object (e.g., image of a human face) as a histogram over its
+                      regions or features (e.g., eyes, nose, ears, etc). Csurka et al. (in their 2004 paper)
+                      demonstrated a BoW model to distinguish between examples of photos of books, cars, trees
+                      people, etc.  </p>
+
+                  <img src="bag_of_words_books.png" alt="books" width="600"/>
+
+
+                  <p>The tool detects suspicious items such as those shown below. Note that there were around 20% false
+                      positives (which really is the state of the art with simple Visual BoW approaches).
+
+                  </p>
+                  <img src="bagofwords_challenges.png" alt="books challenges" width="600"/>
+
+                  <p>Back to the <a href="index.html">home page</a>.</p>
+
+    </section>
+</div>
+
+<!-- FOOTER  -->
+<div id="footer_wrap" class="outer">
+    <footer class="inner">
+        <p>This site was published with <a href="https://pages.github.com">GitHub Pages</a>. It's a work in progress.</p>
+    </footer>
+</div>
+
+</body>
+</html>
