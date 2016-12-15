@@ -48,6 +48,11 @@
           project <a href="cat.pdf">report</a> covers some details of how the tool makes this happen.
       </p>
 
+      <p>
+          Some of the pertinent features of the application are: (a) integration with external
+          build systems; (b) authentication and authorization; (c) visual comparison of student
+          performances; (d) bulk data import; and (e) data export.
+      </p>
 
         <p>
             On an architectural level, the application
@@ -70,27 +75,14 @@
         </p>
 
         <p>
-            Jenkins also allows various build and code analysis plugins to be customized, added, and
-            removed, thus making it making it possible for the tool to be extended.
-        </p>
-
-        <p>
-            Some of the pertinent features of the application are: (a) integration with external
-            build systems; (b) authentication and authorization; (c) visual comparison of student
-            performances; (d) bulk data import; and (e) data export.
-        </p>
-
-        <p>
             As the report suggests, automating contribution analysis has several benefits:</p>
         <ul>
-            <li>Gathering insight into student behavior by looking at how acting as an effective
-                participant relates to the final student grade.
-            <li>Insight into TA behavior, by examining what class graders value, for example.
+            <li>Gathering insights into student behavior by looking at how effective
+              participation relates to final grades.
             <li>Identifying "troubled" relationships by getting alerts for teams that exhibit an
                 imbalance in their participation score.
-            <li>All teams can be graded uniformly, and the effective participation criteria can be
-                made clear easily.
-            <li>A student can more easily report any ``free-riders" in a project.
+            <li>Grading teams uniformly.
+            <li>Allowing a student to more easily report any ``free-riders" in a project.
         </ul>
 
         <!-- Project 3 -->
@@ -127,7 +119,8 @@
                 href="http://www.gurobi.com/">Gurobi</a>
             optimization library. The program uses different criteria (number of students, available
             instructors, etc.) to
-            try to come up with an optimal scheduling solution.</p>
+            try to come up with an optimal scheduling solution (assigning students to classes
+            based on instructor and TA availability, etc).</p>
 
         <p>
             The application was implemented as a 3-tier web application. The functionality was separated
@@ -140,14 +133,11 @@
 
         <p>
 
-            Choosing a 3-tier architecture and a Java EE based stack proved to be a "good enough"
+            Choosing a n(3)-tier architecture and a Java EE based stack proved to be a "good enough"
             choice (sufficient for an A and an offer of TAship for the course). The architecture
-            does indirectly allow vertical and horizontal scaling.
-            In addition, Java EE allows in-memory transactions using a JPA 2nd level cache.
-            This allows the use of a JVM cluster or a data
-            grid cluster (e.g., Infinispan) as an in-memory cache.
-            For large-scale optimization problems, a truly distributed component architecture would have been a
-            better choice.
+            indirectly allows horizontal scaling (with a data grid cluster, for instance).
+            For large-scale production-use optimization problems, however, a truly distributed component architecture
+            would have been a better choice.
             This possibility was not explored due to time constraints, but I hope to create a
             different implementation in future (using Scala and Akka perhaps).
 
