@@ -6,51 +6,63 @@
 </head>
 <body>
 
-<h1>jQuery Isotope</h1>
+<h1>Projects</h1>
 
 <div class="portfolioFilter">
 
 	<a href="#" data-filter="*" class="current">All Categories</a>
-	<a href="#" data-filter=".people">People</a>
-	<a href="#" data-filter=".places">Places</a>
-	<a href="#" data-filter=".food">Food</a>
-	<a href="#" data-filter=".objects">Objects</a>
+	<a href="#" data-filter=".robotics">Robotics</a>
+	<a href="#" data-filter=".cv">Computer Vision</a>
+	<a href="#" data-filter=".se">Software</a>
+	<a href="#" data-filter=".ml">Machine Learning</a>
 
 </div>
 
 <div class="portfolioContainer isotope" style="position: relative; overflow: hidden; height: 856px;">
 
-	<div class="objects isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 0px, 0px);">
-		<img src="images/watch.jpg" alt="image">
-	</div>
+	<div class="box ip robotics isotope-item" style="width: 205px; height: 300px; position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 0px, 0px);">
+          <a href="ip/proj8/index.html"><img src="robotics.jpg"></a><br>
+          <h1><a href="ip/proj8/index.html"><font color="0055d4">Kalman Filter</font></a></h1>
+              <p>Detect motion of a HEXBUG NANO robot.</p>
+  </div>
 
-	<div class="people places isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(470px, 0px, 0px);">
+	<div class="box ip ml isotope-item" style="width: 205px; height: 300px; position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 0px, 0px);">
+          <a href="ip/proj8/index.html"><img src="images/digits.png"></a><br>
+          <h1><a href="ip/proj8/index.html"><font color="0055d4">Digit Recognition</font></a></h1>
+              <p>Recognize handwritten characters</p>
+  </div>
+
+	<!--
+
+	<div class="ml isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(470px, 0px, 0px);">
 		<img src="images/surf.jpg" alt="image">
 	</div>
 
-	<div class="food isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 214px, 0px);">
+	<div class="robotics isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 214px, 0px);">
 		<img src="images/burger.jpg" alt="image">
 	</div>
 
-	<div class="people places isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(470px, 214px, 0px);">
+	<div class="ml isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(470px, 214px, 0px);">
 		<img src="images/subway.jpg" alt="image">
 	</div>
 
-	<div class="places objects isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 428px, 0px);">
+	<div class="ml isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 428px, 0px);">
 		<img src="images/trees.jpg" alt="image">
 	</div>
 
-	<div class="people food objects isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(470px, 428px, 0px);">
+	<div class="se isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(470px, 428px, 0px);">
 		<img src="images/coffee.jpg" alt="image">
 	</div>
 
-	<div class="food objects isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 642px, 0px);">
+	<div class="se isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 642px, 0px);">
 		<img src="images/wine.jpg" alt="image">
 	</div>
 
-	<div class="food isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(470px, 642px, 0px);">
+	<div class="robotics isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(470px, 642px, 0px);">
 		<img src="images/salad.jpg" alt="image">
 	</div>
+
+-->
 
 </div>
 
@@ -87,16 +99,7 @@ $(window).load(function(){
 </script>
 
 
-<h4>Find this Useful? Alms for the Starving Tutorial Author...</h4>
-
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-	<input type="hidden" name="cmd" value="_s-xclick">
-	<input type="hidden" name="hosted_button_id" value="VDHEWUCK6TCVS">
-	<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-	<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-</form>
-
- <!-- Google Analytics -->
+<!-- Google Analytics -->
 <script type="text/javascript">
 
 	var _gaq = _gaq || [];

@@ -42,3 +42,43 @@ img {
     -moz-transition-property: -moz-transform, opacity;
     transition-property: transform, opacity;
 }
+
+.box {
+    color: #4d4d4d;
+    float: left;
+    margin: 10px;
+    width: 220px;
+    height: auto;
+	position: relative;
+    box-shadow: 2px 2px 6px #aaaaaa;
+}
+
+.box img {
+    width: 92%;
+    height: auto;
+    margin: 4%;
+    margin-bottom: 0px;
+}
+
+.box h1 {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    margin: 0px 10px;
+    border-bottom: 1px solid #b3b3b3;
+}
+
+.box h1 a{
+    text-decoration: none;
+    color: #00ccff;
+}
+
+.box p {
+    color: #888888;
+    font-family: Arial, sans-serif;
+    width: 95%;
+    margin: 0px 10px 5px;
+    font-size: 12px;
+    line-height: 14px;
+    line-height: 20px;
+}
